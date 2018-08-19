@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Locale;
 
 @RestController
-@RequestMapping("/purveyor")
+@RequestMapping("/product")
 public class ProductController {
 
     @Autowired
@@ -32,7 +32,7 @@ public class ProductController {
         return productService.getById(id);
     }
 
-    @PostMapping("/create/{restaurant}")
+    @PostMapping("/create/{product}")
     /** Cria um produto a partir dos dados enviaods pela api */
     public Product createRestaurant(@Valid @RequestBody ProductDto productDto) throws ParseException {
 
